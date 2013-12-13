@@ -5,58 +5,49 @@ class users_controller extends base_controller {
     public function __construct() {
         parent::__construct();
     } 
-
-    public function index() {
-        echo "This is the index page";
-        $q = "select * from users";
-
-        $result = DB::instance(DB_NAME)->select_rows($q);
-    }
+    
     # renders interface of sign up
     public function signup($error = NULL) {
-               
         # Setup view
         $this->template->content = View::instance('v_users_signup');
         $this->template->title = "Sign Up";
         $this->template->content->error = $error;
-           
+             
         # Render template
-        echo $this->template;
-    
+        echo $this->template->content;
     }
     # register a new user into the database.
     public function p_signup() {
         #error checking : if not fullfilled, send the error message.
-        if(!$_POST['name']||!$_POST['uri']||!$_POST['email'] || !$_POST['password'] ){
+        if(!$_POST['first_name']||!$_POST['last_name']||!$_POST['email'] || !$_POST['password']){
             Router::redirect("/users/signup/error");
         }
 
         #error checking : compare POST data with database data
         $email = $_POST['email'];
 
-        $q = "select email from sites
+        $q = "select email from users
              where email = '$email'";
         $exist = DB::instance(DB_NAME)->select_field($q);     
         //compare POST with database already registered
-        //if($exist==$email){
-        //    Router::redirect('/users/signup/failed');
-        //}
+        if($exist==$email){
+            Router::redirect('/users/signup/failed');
+        }
         
         # More data we want stored with the user
-        //$_POST['created']  = Time::now();
-        //$_POST['modified'] = Time::now();
+        $_POST['created']  = Time::now();
+        $_POST['modified'] = Time::now();
 
         # Encrypt the password  
         $_POST['password'] = sha1(PASSWORD_SALT.$_POST['password']);            
 
         # Create an encrypted token via their email address and a random string
-        //$_POST['token'] = sha1(TOKEN_SALT.$_POST['email'].Utils::generate_random_string());
+        $_POST['token'] = sha1(TOKEN_SALT.$_POST['email'].Utils::generate_random_string());
 
         # Insert this user into the database
-        $user_id = DB::instance(DB_NAME)->insert('sites', $_POST);
+        $user_id = DB::instance(DB_NAME)->insert('users', $_POST);
 
         //sending mail when a user signed up
-        /*
         $to[]    = Array("name" => APP_NAME, "email" => $email);
         $from    = Array("name" => APP_NAME, "email" => APP_EMAIL);
         $subject = "Message from SQUAWK";              
@@ -68,8 +59,6 @@ class users_controller extends base_controller {
         Email::send($to, $from, $subject, $body, true, $cc, $bcc);
 
         Router::redirect('/users/login/registered');
-        */
-        echo "your site is registered";
     }
     #interface of login page.
     public function login($error = NULL) {
@@ -81,7 +70,7 @@ class users_controller extends base_controller {
         $this->template->content->error = $error;
 
         # Render template
-        echo $this->template;
+        echo $this->template->content;
     }
     # processes the request of a user's login.
     public function p_login() {

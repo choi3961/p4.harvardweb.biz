@@ -7,7 +7,5 @@
 	<form action = 'p_upload' method = 'post'>
 		<input type = 'text' name = 'uri'><br>
 		<input type = 'submit'>
-
 	</form>
-
 </div>

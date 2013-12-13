@@ -197,12 +197,7 @@
 						<li><a href="#" class = 'local02'>나주시</a></li>
 					</ul>
 				</li>			
-				<li><a href="#" class = 'header02-local'>제주도</a>
-					<ul class = 'local'>
-						<li><a href="#" class = 'local02'>서귀포시</a></li>
-						<li><a href="#" class = 'local02'>제주시</a></li>
-					</ul>	
-				</li>			
+							
 			</ul>
 		</div>
 
@@ -272,7 +267,7 @@
         ?>
 
 		<?php foreach($result as $post): ?>
-			<?php if($num >63): ?>
+			<?php if($num >55): ?>
 			<?php break; ?>
 			<?php endif; ?>
 			<a href="<?=$post['domain_address']?>" target="_blank"><div class = 'box'><?=$post['name'] ?></div></a>
@@ -295,7 +290,6 @@
 	
 	<div class = 'footer'>
 	</div>
-	
 </div>
 
 

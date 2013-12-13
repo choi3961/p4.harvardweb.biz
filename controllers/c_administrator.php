@@ -35,10 +35,8 @@ class administrator_controller extends base_controller{
 
 				echo $data[3];
 				echo "<br>";
-
 			}
 		}
-
 	}
 }
 ?>

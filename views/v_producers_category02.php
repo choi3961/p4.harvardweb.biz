@@ -19,9 +19,6 @@
 			
 		 	endforeach; 
 		?>
-
-		<a href = '#' class = 'category02' id = '30'>here</a>
-		<li><a href = '#' class = 'category02' id = '50'>ggg</a> </li>
 	</div>
 
 	<div class = 'bottom-nav'>

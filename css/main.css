@@ -87,11 +87,13 @@ a:link{
 
 .lefter{
 	width: 11%;
-	height: 927px;
+	height: 917px;
 	left: 0px;
 	top: 170px;
 	background-color: #EB4F0C;
 	position: absolute;
+	text-indent: 5px;
+	padding-top: 10px;
 }
 
 .lefter ul{
@@ -114,6 +116,7 @@ a:link{
 	//display: inline;
 	margin: 0px;
 	//padding: 5px;
+	text-indent: 10px;
 }
 
 .lefter ul li ul li{
@@ -157,7 +160,7 @@ a:link{
 	border-style: outset;
 	border-width: 2px;
 	float: left;
-	//margin: 2px auto;
+	margin: 6px;
 	padding: 5px 2px 2px 2px;
 	text-align: center;
 	background-color: #aa99ff;

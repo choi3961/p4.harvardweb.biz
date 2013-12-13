@@ -5,63 +5,59 @@ class producers_controller extends base_controller{
 		parent::__construct();
 	}
 
-
 	public function index(){
 		echo "hello indexww";
 	}
 
-
 	public function local(){
-        //echo "hello local555";
-
         $temp = $_POST['local'];
-
         $q="SELECT 
-            domain_address
+            domain_address,
+            name
             FROM sites
             WHERE local = '$temp';";
 
         # Run the query
         $posts = DB::instance(DB_NAME)->select_rows($q);
 
-       foreach ($posts as $post) {
-            echo $post['domain_address'];
-            echo "<br>";
-        }
+        $this->template->content = View::instance('v_producers_local');
+        $this->template->content->local=$posts;
+        echo $this->template->content;
     }
 
     public function local_part($part){
-
-        $this->template->content = View::instance('v_producers_localpart');
-        
-        //$temp = $_POST['category02'];
-        //$temp = '';
         $q="SELECT 
-            domain_address
+            domain_address,
+            name
             FROM sites;";
 
         # Run the query
         $posts = DB::instance(DB_NAME)->select_rows($q);
+
+        $this->template->content = View::instance('v_producers_localpart');
         $this->template->content->kk=$posts;
         $this->template->content->loc_num = $part;  
 
         echo $this->template->content;
     }
 
-
     public function local02(){
-
        $temp = $_POST['local02'];
-
         $q="SELECT 
-            domain_address
+            domain_address,
+            name
             FROM sites
             WHERE local02 = '$temp';";
 
         # Run the query
-        $posts = DB::instance(DB_NAME)->select_rows($q);
+        $local02 = DB::instance(DB_NAME)->select_rows($q);
 
-       foreach($posts as $post){
+        $this->template->content = View::instance('v_producers_local');
+        $this->template->content->local=$local02;
+
+        echo $this->template->content;
+
+       foreach($local02 as $local02_show){
             echo "hello";
             echo $post['domain_address'];
             echo "<br>";
@@ -69,40 +65,81 @@ class producers_controller extends base_controller{
     }
 
     public function category02($loc){
-
-        //echo $loc;
-
-        $this->template->content = View::instance('v_producers_category02');
-
+        $this->template->content = View::instance('v_producers_local');//'v_producers_category02'
         $temp = $_POST['category02'];
 
         $q="SELECT 
-            domain_address
+            domain_address,
+            name
             FROM sites
             WHERE category02 = '$temp';";
-        # Run the query
 
+        # Run the query
         $posts = DB::instance(DB_NAME)->select_rows($q);
-        $this->template->content->kk=$posts;
-        $this->template->content->loc_num = $loc;
+        $this->template->content->local=$posts;
+        //$this->template->content->loc_num = $loc;
         
         echo $this->template->content;
+    } 
 
+
+    # renders interface of sites_register
+    public function sites_register($error = NULL) {
+        # Setup view
+        $this->template->content = View::instance('v_producers_register');
+        $this->template->title = "Sites_Register";
+        $this->template->content->error = $error;
+           
+        # Render template
+        echo $this->template->content;
     }
 
-    
+    # renders interface of sign up
+    public function p_sites_register($error = NULL) {
+        #error checking : if not fullfilled, send the error message.
+        if(!$_POST['name']||!$_POST['domain_address']||!$_POST['email'] || !$_POST['password'] ){
+            Router::redirect("/producers/signup/error");
+        }
 
-   
+        #error checking : compare POST data with database data
+        $email = $_POST['email'];
+
+        $q = "select email from sites
+             where email = '$email'";
+        $exist = DB::instance(DB_NAME)->select_field($q);     
+        //compare POST with database already registered
+        //if($exist==$email){
+        //    Router::redirect('/users/signup/failed');
+        //}
+        
+        # More data we want stored with the user
+        //$_POST['created']  = Time::now();
+        //$_POST['modified'] = Time::now();
+
+        # Encrypt the password  
+        $_POST['password'] = sha1(PASSWORD_SALT.$_POST['password']);            
+
+        # Create an encrypted token via their email address and a random string
+        //$_POST['token'] = sha1(TOKEN_SALT.$_POST['email'].Utils::generate_random_string());
+
+        # Insert this user into the database
+        $user_id = DB::instance(DB_NAME)->insert('sites', $_POST);
+
+        //sending mail when a user signed up
+        /*
+        $to[]    = Array("name" => APP_NAME, "email" => $email);
+        $from    = Array("name" => APP_NAME, "email" => APP_EMAIL);
+        $subject = "Message from SQUAWK";              
+        $body = View::instance('v_email_example');
+        $cc = "";
+        $bcc = "";
+    
+        # Send email
+        Email::send($to, $from, $subject, $body, true, $cc, $bcc);
+
+        Router::redirect('/users/login/registered');
+        */
+        echo "your site is registered";
+    }    
 }
 
-/*
-       foreach ($posts as $post) {
-            $num++;
-            echo $post['domain_address'];
-            echo "<br>";
-            if(($num>10) && ($num%10==0)){
-                echo $num;
-                break;
-            }
-        }
- */
