@@ -5,12 +5,25 @@ class producers_controller extends base_controller{
 		parent::__construct();
 	}
 
-	public function index(){
-		echo "hello indexww";
-	}
+    public function total_part($part){
+        $q="SELECT 
+            domain_address,
+            name
+            FROM sites;";
 
-	public function local(){
+        # Run the query
+        $posts = DB::instance(DB_NAME)->select_rows($q);
+
+        $this->template->content = View::instance('v_producers_total_part');
+        $this->template->content->kk=$posts;
+        $this->template->content->loc_num = $part;  
+
+        echo $this->template->content;      
+    }
+
+	public function local($part){
         $temp = $_POST['local'];
+        //echo $temp;
         $q="SELECT 
             domain_address,
             name
@@ -22,26 +35,30 @@ class producers_controller extends base_controller{
 
         $this->template->content = View::instance('v_producers_local');
         $this->template->content->local=$posts;
+        $this->template->content->part = $part;
         echo $this->template->content;
     }
 
     public function local_part($part){
+        $temp = $_POST['local'];
+        //echo $temp;
         $q="SELECT 
             domain_address,
             name
-            FROM sites;";
+            FROM sites
+            WHERE local = '$temp';";
 
         # Run the query
         $posts = DB::instance(DB_NAME)->select_rows($q);
 
-        $this->template->content = View::instance('v_producers_localpart');
-        $this->template->content->kk=$posts;
-        $this->template->content->loc_num = $part;  
-
+        $this->template->content = View::instance('v_producers_local_part');
+        $this->template->content->local=$posts;
+        $this->template->content->part = $part;
         echo $this->template->content;
     }
 
-    public function local02(){
+
+    public function local02($part){
        $temp = $_POST['local02'];
         $q="SELECT 
             domain_address,
@@ -52,20 +69,53 @@ class producers_controller extends base_controller{
         # Run the query
         $local02 = DB::instance(DB_NAME)->select_rows($q);
 
-        $this->template->content = View::instance('v_producers_local');
+        $this->template->content = View::instance('v_producers_local02');
         $this->template->content->local=$local02;
 
         echo $this->template->content;
-
-       foreach($local02 as $local02_show){
-            echo "hello";
-            echo $post['domain_address'];
-            echo "<br>";
-        } 
     }
 
-    public function category02($loc){
-        $this->template->content = View::instance('v_producers_local');//'v_producers_category02'
+
+    public function local02_part($part){
+       $temp = $_POST['local02'];
+        $q="SELECT 
+            domain_address,
+            name
+            FROM sites
+            WHERE local02 = '$temp';";
+
+        # Run the query
+        $local02 = DB::instance(DB_NAME)->select_rows($q);
+
+        $this->template->content = View::instance('v_producers_local02_part');
+        $this->template->content->local=$local02;
+
+        echo $this->template->content;
+    }
+
+
+
+    public function category02($part){
+        $this->template->content = View::instance('v_producers_category02');//'v_producers_category02'
+        $temp = $_POST['category02'];
+
+        $q="SELECT 
+            domain_address,
+            name
+            FROM sites
+            WHERE category02 = '$temp';";
+
+        # Run the query
+        $posts = DB::instance(DB_NAME)->select_rows($q);
+        $this->template->content->category02=$posts;
+        //$this->template->content->loc_num = $loc;
+        
+        echo $this->template->content;
+    } 
+
+
+    public function category02_part($part){
+        $this->template->content = View::instance('v_producers_category02_part');//'v_producers_category02'
         $temp = $_POST['category02'];
 
         $q="SELECT 
@@ -81,6 +131,31 @@ class producers_controller extends base_controller{
         
         echo $this->template->content;
     } 
+
+
+
+
+   //////////////////////////////////////////////////////////// 
+ /*
+    public function local_part($part){
+        $q="SELECT 
+            domain_address,
+            name
+            FROM sites;";
+
+        # Run the query
+        $posts = DB::instance(DB_NAME)->select_rows($q);
+
+        $this->template->content = View::instance('v_producers_localpart');
+        $this->template->content->kk=$posts;
+        $this->template->content->loc_num = $part;  
+
+        echo $this->template->content;
+    }
+*/
+ //////////////////////////////////////////////////////////////   
+
+    
 
 
     # renders interface of sites_register

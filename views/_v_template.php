@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="/css/main.css">
     <link rel="stylesheet" type="text/css" href="/css/main02.css">
     <script src = "/js/jquery.js"></script>
+    
 	<!-- Controller Specific JS/CSS -->
 	<?php if(isset($client_files_head)) echo $client_files_head; ?>
 	

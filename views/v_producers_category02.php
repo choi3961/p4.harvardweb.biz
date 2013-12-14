@@ -1,39 +1,24 @@
 <div>
-	<div>
-		<?php 
-			$num = $loc_num-10;
-			$start_num = 0;
-			$nav_num = 0;
-		?>
-		<?php foreach($kk as $post): 
-		 	
-		 	if($start_num>=$loc_num){
-				break;
-			}
-		 	if($start_num>=($num)){
-		 		echo $post['domain_address']; 
-				echo "<br>";
-		 	}
-			
-			$start_num++;
-			
-		 	endforeach; 
-		?>
-	</div>
+	<?php 
+		$num = 0;
+		$nav_num=0; 
+	?>
+	<?php foreach($category02 as $site): ?>
+		
+			<?php if($num <40): ?>
+				<a href="<?=$site['domain_address']?>" target="_blank"><div class = 'box'><?=$site['name'] ?></div></a>
+		 	<?php endif; ?>
+		 	<?php	$num++; ?>
 
-	<div class = 'bottom-nav'>
-		<?php foreach($kk as $post): ?>
-			
-		<?php 
+	<?php endforeach; ?>
 
-			if($nav_num%10==0){
+</div>
 
-				echo "<a href = '#' class = 'category02' id = '50'>" . $nav_num/10 . "</a>";
-			}
-			
-			$nav_num++;
-
-		?>
-		<?php endforeach; ?>
-	</div>
+<div class = 'bottom-nav'>
+	<?php foreach($category02 as $site): ?>
+		<?php if($nav_num%10 == 0):?>
+			<a href="#" class = 'category02-part'><?php echo $nav_num/10;?></a>
+		<?php endif; ?>
+		<?php $nav_num++; ?>
+	<?php endforeach;?>
 </div>

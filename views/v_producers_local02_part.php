@@ -1,3 +1,5 @@
+<?php echo "hello local02 part"; ?>
+<!--
 <div>
 	<?php 
 		$num = 0;
@@ -17,9 +19,9 @@
 <div class = 'bottom-nav'>
 	<?php foreach($local as $post): ?>
 		<?php if($nav_num%10 == 0):?>
-			<a href="#" class = 'local-part'><?php echo $nav_num/10;?></a>
+			<a href="#" class = 'local02-part'><?php echo $nav_num/10;?></a>
 		<?php endif; ?>
 		<?php $nav_num++; ?>
 	<?php endforeach;?>
 </div>
-<script src = 'js/control.js'></script>
+-->

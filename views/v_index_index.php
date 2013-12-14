@@ -65,7 +65,6 @@
 						<li><a href="#" class = 'local02'>여주시</a></li>
 					</ul>
 				</li>
-
 				<li><a href="#" class = 'header02-local'>충청북도</a>
 					<ul class = 'local'>
 						<li><a href="#" class = 'local02'>괴산군</a></li>
@@ -128,7 +127,8 @@
 
 						<li><a href="#" class = 'local02'>청송군</a></li>
 						<li><a href="#" class = 'local02'>영양군</a></li>
-					</ul>				
+					</ul>
+				</li>				
 				<li><a href="#" class = 'header02-local'>경상남도</a>
 					<ul class = 'local'>
 						<li><a href="#" class = 'local02'>함안군</a></li>
@@ -196,11 +196,9 @@
 						<li><a href="#" class = 'local02'>영광군</a></li>
 						<li><a href="#" class = 'local02'>나주시</a></li>
 					</ul>
-				</li>			
-							
+				</li>
 			</ul>
 		</div>
-
 	</div><br>
 	<hr>
 	<div class = 'lefter'>
@@ -229,7 +227,6 @@
 					<li class = 'category02'>양고기</li>
 				</ul>
 			</li>
-
 			<li class = 'category01'><a href = '#' class = 'category001'>과채류</a>
 				<ul>
 					<li class = 'category02'>배</li>
@@ -278,7 +275,7 @@
 		<div class = 'bottom-nav'>
 		<?php foreach($result as $post): ?>
 			<?php if($num2%10 == 0):?>
-				<a href="#" class = 'center-part'><?php echo $num2/10;?></a>
+				<a href="#" class = 'total-part'><?php echo $num2/10;?></a>
 			<?php endif; ?>
 			<?php $num2++; ?>
 		<?php endforeach;?>
