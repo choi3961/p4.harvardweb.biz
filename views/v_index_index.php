@@ -1,5 +1,11 @@
-﻿<div class = 'container'><br>
+﻿<!--
+
+-->
+<div class = 'container'><br>
 	<div id = 'display01'></div>
+	<!--
+
+	-->
 	<div class = 'header'>
 		<div id = 'display01'></div>
 		<div class = 'header01'>
@@ -201,6 +207,9 @@
 		</div>
 	</div><br>
 	<hr>
+	<!--
+
+-->
 	<div class = 'lefter'>
 		<ul>
 			<li class = 'category01'><a href = '#' class = 'category001'>과채류</a>
@@ -253,7 +262,9 @@
 			</li>
 		</ul>
 	</div>
+<!--
 
+-->
 	<div class = 'center'>
 		<div>
 		<?php 
@@ -281,10 +292,14 @@
 		<?php endforeach;?>
 		</div>
 	</div>
+<!--
 
+-->
 	<div class = 'righter'>
 	</div>
-	
+<!--
+
+-->	
 	<div class = 'footer'>
 	</div>
 </div>

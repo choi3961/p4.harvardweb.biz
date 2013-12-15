@@ -1,10 +1,18 @@
 <?php
+/*
+    This class is for filtering against the producers'(farmers') webpages.
+    It filters the pages according to the areas(bigger and smaller) and categories 
+    of agricultural products.
+*/
 class producers_controller extends base_controller{
     
 	public function __construct(){
 		parent::__construct();
 	}
 
+    /*
+        This is for filtering the total webpages according to numbers of webpages(30~60)
+    */
     public function total_part($part){
         $q="SELECT 
             domain_address,
@@ -21,6 +29,10 @@ class producers_controller extends base_controller{
         echo $this->template->content;      
     }
 
+    /*
+        This filters the domains of producers(farmers) accroding to the local area.
+        It works when the navigator at the header part is clicked.
+    */
 	public function local($part){
         $temp = $_POST['local'];
         //echo $temp;
@@ -39,6 +51,10 @@ class producers_controller extends base_controller{
         echo $this->template->content;
     }
 
+    /*
+        This filters the domains of producers(farmers) accroding to the local area.
+        It works when the navigator of numbers at the bottom is clicked.
+    */
     public function local_part($part){
         $temp = $_POST['local'];
         //echo $temp;
@@ -57,7 +73,11 @@ class producers_controller extends base_controller{
         echo $this->template->content;
     }
 
-
+    /*
+        This filters the domains of producers(farmers) accroding to the local area.
+        It works when the navigator at the header part is clicked.
+        (smaller local area than local() function)
+    */
     public function local02($part){
        $temp = $_POST['local02'];
         $q="SELECT 
@@ -75,7 +95,11 @@ class producers_controller extends base_controller{
         echo $this->template->content;
     }
 
-
+    /*
+        This filters the domains of producers(farmers) accroding to the local area.
+        It works when the navigator of numbers at the bottom is clicked.
+        (smaller local area than local() function)
+    */
     public function local02_part($part){
        $temp = $_POST['local02'];
         $q="SELECT 
@@ -93,8 +117,10 @@ class producers_controller extends base_controller{
         echo $this->template->content;
     }
 
-
-
+    /*
+        This filters the producers'(farmers') domain addresses accroding to the category
+        of the products.
+    */
     public function category02($part){
         $this->template->content = View::instance('v_producers_category02');//'v_producers_category02'
         $temp = $_POST['category02'];
@@ -113,7 +139,11 @@ class producers_controller extends base_controller{
         echo $this->template->content;
     } 
 
-
+    /*
+        This filters the domains of producers(farmers) accroding to the category of products.
+        It works when the navigator of numbers at the bottom is clicked.
+        (smaller local area than local() function)
+    */
     public function category02_part($part){
         $this->template->content = View::instance('v_producers_category02_part');//'v_producers_category02'
         $temp = $_POST['category02'];
@@ -132,33 +162,10 @@ class producers_controller extends base_controller{
         echo $this->template->content;
     } 
 
-
-
-
-   //////////////////////////////////////////////////////////// 
- /*
-    public function local_part($part){
-        $q="SELECT 
-            domain_address,
-            name
-            FROM sites;";
-
-        # Run the query
-        $posts = DB::instance(DB_NAME)->select_rows($q);
-
-        $this->template->content = View::instance('v_producers_localpart');
-        $this->template->content->kk=$posts;
-        $this->template->content->loc_num = $part;  
-
-        echo $this->template->content;
-    }
-*/
- //////////////////////////////////////////////////////////////   
-
-    
-
-
-    # renders interface of sites_register
+    /*
+        This is not for filtering. This is for the register of domain address.
+        This renders the interface of sites_register
+    */
     public function sites_register($error = NULL) {
         # Setup view
         $this->template->content = View::instance('v_producers_register');
@@ -169,6 +176,9 @@ class producers_controller extends base_controller{
         echo $this->template->content;
     }
 
+    /*
+
+    */
     # renders interface of sign up
     public function p_sites_register($error = NULL) {
         #error checking : if not fullfilled, send the error message.

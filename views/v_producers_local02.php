@@ -1,3 +1,6 @@
+<!--
+
+-->
 <div>
 	<?php 
 		$num = 0;
@@ -14,6 +17,9 @@
 
 </div>
 
+<!--
+
+-->
 <div class = 'bottom-nav'>
 	<?php foreach($local as $post): ?>
 		<?php if($nav_num%10 == 0):?>

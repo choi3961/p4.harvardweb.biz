@@ -1,15 +1,24 @@
+<!--
+	This is the page for the adminstrator to upload the files.
+-->
 <?php
 class administrator_controller extends base_controller{
 	public function __construct(){
 		parent::__construct();
 	}
 
+	/*
+	upload csv file
+	*/
 	public function upload(){
 		$this->template->title="upload";
 		$this->template->content = View::instance("v_administrator_upload");
 		echo $this->template;
 	}
 
+	/*
+	processing the csv file into database.
+	*/
 	public function p_upload(){
 
 		if(isset($_FILES['userfile'])){

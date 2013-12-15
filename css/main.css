@@ -1,9 +1,17 @@
+
+/*
+
+*/
 #menu{
 	width: 897px;
 	margin: auto;
 	height: 30px;
 
 }
+
+/*
+
+*/	
 .container{
 	width:905px;
 	height:1200px;
@@ -14,9 +22,16 @@
 	position: relative;
 }
 
+/*
+
+*/
 .header{
 	height: 120px;
 }
+
+/*
+
+*/
 .header01{
 	margin: auto;
 	width: 600px;
@@ -26,6 +41,9 @@
 	
 }
 
+/*
+
+*/
 .header02{
 	font-size: 21px;
 	margin: 5px auto;
@@ -37,12 +55,18 @@
 	display: block;
 }
 
+/*
+
+*/
 .header02 ul{
 	display: inline;
 	//margin: 0px auto;
 	padding: 0px;
 }
 
+/*
+
+*/
 .header02 ul li{
 	width: 90px;
 	float: left;
@@ -53,11 +77,18 @@
 	//float: left;
 	//position: relative;
 }
+
+/*
+
+*/
 a:link{
 	text-decoration: none;
 }
 
 
+/*
+
+*/
 .header02 ul li:hover ul li{
 	width: 90px;
 	height: 20px;
@@ -66,6 +97,9 @@ a:link{
 	float: left;
 }
 
+/*
+
+*/
 .header02 ul li ul{
 	position: absolute;
 	//visibility: hidden;
@@ -77,6 +111,9 @@ a:link{
 }
 
 
+/*
+
+*/
 .header02 ul li ul li{
 	display: none;
 	//display:block;
@@ -84,6 +121,9 @@ a:link{
 }
 
 
+/*
+
+*/
 
 .lefter{
 	width: 11%;
@@ -96,12 +136,18 @@ a:link{
 	padding-top: 10px;
 }
 
+/*
+
+*/
 .lefter ul{
 	//display: inline;
 	margin: 0px;
 	padding: 0px;
 }
 
+/*
+
+*/
 .lefter ul li{
 	//display: inline;
 	//margin: 5px auto;
@@ -112,6 +158,9 @@ a:link{
 	font-size: 23px;
 }
 
+/*
+
+*/
 .lefter ul li ul{
 	//display: inline;
 	margin: 0px;
@@ -119,6 +168,9 @@ a:link{
 	text-indent: 10px;
 }
 
+/*
+
+*/
 .lefter ul li ul li{
 	//display: none;
 	//margin: 5px auto;
@@ -145,6 +197,10 @@ a:link{
 	margin-left: 100px;
 	top: 50px;
 }
+
+/*
+
+*/
 .righter{
 	width: 11%;
 	height: 927px;
@@ -154,6 +210,10 @@ a:link{
 	background-color: #6BD663;
 	//z-index: -5;
 }
+
+/*
+
+*/
 .box{
 	width: 79px;
 	height: 80px;
@@ -166,6 +226,10 @@ a:link{
 	background-color: #aa99ff;
 }
 
+
+/*
+
+*/
 .bottom-nav{
 	margin: 700px auto;
 	width: 520px;
@@ -174,6 +238,10 @@ a:link{
 	padding-top: 10px;
 }
 
+
+/*
+
+*/
 .footer{
 	background-color: green;
 	height: 100px;
@@ -182,6 +250,10 @@ a:link{
 
 }
 
+
+/*
+
+*/
 li ul{
 	//visibility: hidden;
 }

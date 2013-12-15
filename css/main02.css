@@ -12,6 +12,9 @@
 	
 }
 
+/*
+
+*/
 #menu02{
 	background-color:#cccccc;
 	width:700px;
@@ -20,6 +23,9 @@
 	font-size: 19px;
 }
 
+/*
+
+*/
 .trade-mark{
 	background-color: #aaaa33;
 	width: 700px;
@@ -32,6 +38,9 @@
 	color: red;
 }
 
+/*
+
+*/
 .header002{
 	background-color: #aaaa33;
 	width: 700px;
@@ -40,14 +49,23 @@
 	font-size: 39px;
 }
 
+/*
+
+*/
 .greetings{
 	float: right;
 }
 
+/*
+
+*/
 .body02{
 	background-color: #77ffa0;
 }
 
+/*
+
+*/
 .center02{
 	margin: 0px auto; 
 	padding: 19px;
@@ -58,15 +76,24 @@
 	border-color: #555555;
 }
 
+/*
+
+*/
 .cen-cen{
 	width:300px;
 	margin:auto;
 }
 
+/*
+
+*/
 .form-standard{
 	margin-left:9px;
 }
 
+/*
+
+*/
 .form-standard input{
 	border-radius: 9px;
 	height:21px;
@@ -74,20 +101,32 @@
 	border-color: #999999;
 }
 
+/*
+
+*/
 .form-standard input[type = 'submit']{
 	width:90px;
 	height: 30px;
 }
 
+/*
+
+*/
 .form-standard input[type]:hover{
 	background-color: #cccccc;
 }
 
+/*
+
+*/
 .form-standard textarea{
 	width: 475px;
 	height: 120px;
 }
 
+/*
+
+*/
 table {
   max-width: 100%;
   background-color: transparent;
@@ -95,11 +134,17 @@ table {
   border-spacing: 0;
 }
 
+/*
+
+*/
 .table {
   width: 100%;
   margin-bottom: 20px;
 }
 
+/*
+
+*/
 .table th, 
 .table td {
   padding: 8px;
@@ -109,14 +154,23 @@ table {
   border-top: 2px solid #dddddd;
 }
 
+/*
+
+*/
 .table th {
   font-weight: bold;
 }
 
+/*
+
+*/
 .table thead th {
   vertical-align: bottom;
 }
 
+/*
+
+*/
 .table caption + thead tr:first-child th,
 .table caption + thead tr:first-child td,
 .table colgroup + thead tr:first-child th,
@@ -126,24 +180,39 @@ table {
   border-top: 0;
 }
 
+/*
+
+*/
 .table tbody + tbody {
   border-top: 2px solid #dddddd;
 }
 
+/*
+
+*/
 .table .table {
   background-color: #ffffff;
 }
 
+/*
+
+*/
 .table-striped tbody > tr:nth-child(odd) > td,
 .table-striped tbody > tr:nth-child(odd) > th {
   background-color: #f9f9f9;
 }
 
+/*
+
+*/
 .table-hover tbody tr:hover > td,
 .table-hover tbody tr:hover > th {
   background-color: #f5f5f5;
 }
 
+/*
+
+*/
 .article{
 	margin: 9px 9px 9px 19px;
 	background-color: #dddddd;
@@ -151,10 +220,16 @@ table {
 	padding: 0 3px 3px 10px ;
 }
 
+/*
+
+*/
 .article-control{
 	display:inline-block;
 }
 
+/*
+
+*/
 .article-control input[type='submit']:hover{
 	background-color: gray;
 }

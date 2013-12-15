@@ -1,3 +1,6 @@
+<!--
+
+-->
 <?php echo "hello local02 part"; ?>
 <!--
 <div>

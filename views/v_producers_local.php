@@ -1,3 +1,6 @@
+<!--
+
+-->
 <div>
 	<?php 
 		$num = 0;
@@ -13,7 +16,9 @@
 	<?php endforeach; ?>
 
 </div>
+<!--
 
+-->
 <div class = 'bottom-nav'>
 	<?php foreach($local as $post): ?>
 		<?php if($nav_num%10 == 0):?>
@@ -22,4 +27,3 @@
 		<?php $nav_num++; ?>
 	<?php endforeach;?>
 </div>
-<script src = 'js/control.js'></script>
