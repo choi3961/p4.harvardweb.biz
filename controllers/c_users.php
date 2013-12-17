@@ -14,7 +14,7 @@ class users_controller extends base_controller {
         $this->template->content->error = $error;
              
         # Render template
-        echo $this->template->content;
+        echo $this->template;
     }
     # register a new user into the database.
     public function p_signup() {
@@ -70,7 +70,7 @@ class users_controller extends base_controller {
         $this->template->content->error = $error;
 
         # Render template
-        echo $this->template->content;
+        echo $this->template;
     }
     # processes the request of a user's login.
     public function p_login() {

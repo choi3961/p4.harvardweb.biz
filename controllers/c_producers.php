@@ -22,11 +22,13 @@ class producers_controller extends base_controller{
         # Run the query
         $posts = DB::instance(DB_NAME)->select_rows($q);
 
-        $this->template->content = View::instance('v_producers_total_part');
-        $this->template->content->kk=$posts;
-        $this->template->content->loc_num = $part;  
+        $this->template->content = View::instance('v_index_index');
+        $this->template->content->content02 = View::instance('v_producers_total_part');
+        $this->template->content->content02->kk=$posts;
+        $this->template->content->content02->loc_num = $part;  
 
-        echo $this->template->content;      
+
+        echo $this->template;      
     }
 
     /*
@@ -34,21 +36,22 @@ class producers_controller extends base_controller{
         It works when the navigator at the header part is clicked.
     */
 	public function local($part){
-        $temp = $_POST['local'];
+        //$temp = $_POST['local'];
         //echo $temp;
         $q="SELECT 
             domain_address,
             name
             FROM sites
-            WHERE local = '$temp';";
+            WHERE local = '$part';";
 
         # Run the query
         $posts = DB::instance(DB_NAME)->select_rows($q);
 
-        $this->template->content = View::instance('v_producers_local');
-        $this->template->content->local=$posts;
-        $this->template->content->part = $part;
-        echo $this->template->content;
+        $this->template->content = View::instance('v_index_index');
+        $this->template->content->content02 = View::instance('v_producers_local');
+        $this->template->content->content02->local=$posts;
+        $this->template->content->content02->part = $part;
+        echo $this->template;
     }
 
     /*
@@ -56,21 +59,22 @@ class producers_controller extends base_controller{
         It works when the navigator of numbers at the bottom is clicked.
     */
     public function local_part($part){
-        $temp = $_POST['local'];
+        //$temp = $_POST['local'];
         //echo $temp;
         $q="SELECT 
             domain_address,
             name
             FROM sites
-            WHERE local = '$temp';";
+            WHERE local = 'local';";
 
         # Run the query
         $posts = DB::instance(DB_NAME)->select_rows($q);
 
-        $this->template->content = View::instance('v_producers_local_part');
-        $this->template->content->local=$posts;
-        $this->template->content->part = $part;
-        echo $this->template->content;
+        $this->template->content = View::instance('v_index_index');
+        $this->template->content->content02 = View::instance('v_producers_local_part');
+        $this->template->content->content02->kk=$posts;
+        $this->template->content->content02->loc_num = $part;
+        echo $this->template;
     }
 
     /*
@@ -79,20 +83,21 @@ class producers_controller extends base_controller{
         (smaller local area than local() function)
     */
     public function local02($part){
-       $temp = $_POST['local02'];
+       //$temp = $_POST['local02'];
         $q="SELECT 
             domain_address,
             name
             FROM sites
-            WHERE local02 = '$temp';";
+            WHERE local02 = '$part';";
 
         # Run the query
         $local02 = DB::instance(DB_NAME)->select_rows($q);
 
-        $this->template->content = View::instance('v_producers_local02');
-        $this->template->content->local=$local02;
+        $this->template->content = View::instance('v_index_index');
+        $this->template->content->content02 = View::instance('v_producers_local02');
+        $this->template->content->content02->local=$local02;
 
-        echo $this->template->content;
+        echo $this->template;
     }
 
     /*
@@ -111,10 +116,11 @@ class producers_controller extends base_controller{
         # Run the query
         $local02 = DB::instance(DB_NAME)->select_rows($q);
 
-        $this->template->content = View::instance('v_producers_local02_part');
-        $this->template->content->local=$local02;
+        $this->template->content = View::instance('v_index_index');
+        $this->template->content->content02 = View::instance('v_producers_local02_part');
+        $this->template->content->content02->local=$local02;
 
-        echo $this->template->content;
+        echo $this->template;
     }
 
     /*
@@ -122,21 +128,22 @@ class producers_controller extends base_controller{
         of the products.
     */
     public function category02($part){
-        $this->template->content = View::instance('v_producers_category02');//'v_producers_category02'
-        $temp = $_POST['category02'];
+        $this->template->content = View::instance('v_index_index');
+        $this->template->content->content02 = View::instance('v_producers_category02');//'v_producers_category02'
+        //$temp = $_POST['category02'];
 
         $q="SELECT 
             domain_address,
             name
             FROM sites
-            WHERE category02 = '$temp';";
+            WHERE category02 = '$part';";
 
         # Run the query
         $posts = DB::instance(DB_NAME)->select_rows($q);
-        $this->template->content->category02=$posts;
+        $this->template->content->content02->category02=$posts;
         //$this->template->content->loc_num = $loc;
         
-        echo $this->template->content;
+        echo $this->template;
     } 
 
     /*
@@ -145,7 +152,8 @@ class producers_controller extends base_controller{
         (smaller local area than local() function)
     */
     public function category02_part($part){
-        $this->template->content = View::instance('v_producers_category02_part');//'v_producers_category02'
+        $this->template->content = View::instance('v_index_index');
+        $this->template->content->content02 = View::instance('v_producers_category02_part');
         $temp = $_POST['category02'];
 
         $q="SELECT 
@@ -156,10 +164,10 @@ class producers_controller extends base_controller{
 
         # Run the query
         $posts = DB::instance(DB_NAME)->select_rows($q);
-        $this->template->content->local=$posts;
+        $this->template->content->content02->local=$posts;
         //$this->template->content->loc_num = $loc;
         
-        echo $this->template->content;
+        echo $this->template;
     } 
 
     /*
@@ -173,7 +181,7 @@ class producers_controller extends base_controller{
         $this->template->content->error = $error;
            
         # Render template
-        echo $this->template->content;
+        echo $this->template;
     }
 
     /*

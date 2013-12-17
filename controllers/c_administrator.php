@@ -7,6 +7,63 @@ class administrator_controller extends base_controller{
 		parent::__construct();
 	}
 
+	public function checkdns(){
+///////////////////////////////////////////////
+	    $q="SELECT 
+        domain_address
+        FROM sites;";
+
+	    # Run the query
+	    $posts = DB::instance(DB_NAME)->select_rows($q);
+
+$num = 0;
+	    foreach($posts as $key){
+	    	
+	    	echo $num;
+	    	$num++;
+	    	if($num<600){
+	    		continue;
+	    	}
+	    	$site = $key['domain_address'];
+
+		   	$data = file_get_contents($site);
+		    if($data){
+		    	echo "yes<br>";
+		    }
+		    else{
+		    	echo "no<br>";
+		    	$qq="delete from sites
+		    	    where domain_address = '$site'";
+		    	DB::instance(DB_NAME)->query($qq);
+		    }
+	    }		
+
+///////////////////////////////////////////////
+/*
+	    foreach($posts as $key){
+	    	$num++;
+	    	echo $key['domain_address'];
+	    	echo "<br>";
+	    	
+	    	$site = $key['domain_address'];
+			$temp = checkdnsrr($site);
+
+			if($temp){
+				echo "exists";
+				echo "<br>";
+			}
+			else{
+				echo "no";
+				echo "<br>";
+			}
+	    }
+	    echo $num;
+*/
+///////////////////////////////////////////////////////
+
+
+	}
+
 	/*
 	upload csv file
 	*/

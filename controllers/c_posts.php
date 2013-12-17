@@ -30,7 +30,7 @@ class posts_controller extends base_controller {
         $this->template->content->posts = $posts;
         
         # Rendering the page
-        echo $this->template->content;
+        echo $this->template;
     }
 
     # adding a post
@@ -42,7 +42,7 @@ class posts_controller extends base_controller {
         $this->template->title   = "New Post";
 
         # Render template
-        echo $this->template->content;
+        echo $this->template;
     }
 
     # Process the add request of posting into the database.
@@ -171,7 +171,7 @@ class posts_controller extends base_controller {
         $this->template->content->connections = $connections;
 
         # Render the view
-        echo $this->template->content;
+        echo $this->template;
     }
 
     # Set up the followers of a user.

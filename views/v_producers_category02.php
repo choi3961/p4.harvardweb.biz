@@ -17,6 +17,7 @@
 
 </div>
 
+<!--
 <div class = 'bottom-nav'>
 	<?php foreach($category02 as $site): ?>
 		<?php if($nav_num%10 == 0):?>
@@ -25,3 +26,4 @@
 		<?php $nav_num++; ?>
 	<?php endforeach;?>
 </div>
+-->

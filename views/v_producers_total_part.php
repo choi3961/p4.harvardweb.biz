@@ -3,7 +3,7 @@
 -->
 <div>
 <?php 
-$start_num = $loc_num-55;
+$start_num = $loc_num-49;
 $num = 0;
 $num2 = 0;
 ?>
@@ -27,8 +27,8 @@ $num2 = 0;
 
 <div class = 'bottom-nav'>
 <?php foreach($kk as $totalshow): ?>
-	<?php if($num2%10 == 0):?>
-		<a href="#" class = 'total-part'><?php echo $num2/10;?></a>
+	<?php if($num2%49 == 0):?>
+		<a href="/producers/total_part/<?=$num2?>" class = 'total-part'><?php echo $num2/49;?></a>
 	<?php endif; ?>
 	<?php $num2++; ?>
 <?php endforeach;?>

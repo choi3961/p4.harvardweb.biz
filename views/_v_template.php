@@ -18,18 +18,17 @@
 	<div id='menu'>
         <a href='/'>Home  </a> |
         <!-- Menu for users who are logged in -->
-        <a href='/producers/sites_register' class = 'menu-producers'>sites_register</a> |
+        <a href='/producers/sites_register' class = 'menu-producers'>Sites_register</a> |
         <a href="">USERS</a> ||
-        <a href='#' class = 'menu-users'>signup</a> |
-        <a href='#' class = 'menu-users'>login</a> |
-        <a href='/users/logout'>logout</a> |
+        <a href='/users/signup' class = 'menu-users'>Signup</a> |
+        <a href='/users/login' class = 'menu-users'>Login</a> |
+        <a href='/users/logout'>Logout</a> |
 
         <a href="">POSTS</a> ||
-        <a href='/posts/add' class = 'menu-posts'>add</a> |
-        <a href='/posts/index' class = 'menu-posts'>index</a> |
-        <a href='/posts/mypage' class = 'menu-posts'>mypage</a> |
-        <a href='/posts/update' class = 'menu-posts'>update</a> |
-        <a href='/posts/users' class = 'menu-posts'>users</a> |
+        <a href='/posts/add' class = 'menu-posts'>Add</a> |
+        <a href='/posts/index' class = 'menu-posts'>Index</a> |
+        <a href='/posts/mypage' class = 'menu-posts'>Mypage</a> |
+        <a href='/posts/users' class = 'menu-posts'>Users</a> |
     </div>
 
 	<?php if(isset($content)) echo $content; ?>
