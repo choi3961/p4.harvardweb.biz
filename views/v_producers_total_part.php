@@ -4,13 +4,13 @@
 <div>
 <?php 
 $start_num = $loc_num-49;
-$num = 0;
-$num2 = 0;
+$num = 1;
+$num2 = 1;
 ?>
 
 <?php foreach($kk as $totalshow): ?>
 
-	<?php if($num > $loc_num): ?>
+	<?php if($num >= $loc_num): ?>
 		<?php break; ?>
 	<?php endif; ?>
 

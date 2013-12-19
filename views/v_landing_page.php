@@ -3,7 +3,7 @@
 		$q = "select * from sites";
         $result = DB::instance(DB_NAME)->select_rows($q);
         $num = 1;
-        $num2 = 0;
+        $num2 = 1;
         ?>
 
 		<?php foreach($result as $post): ?>

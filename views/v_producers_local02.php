@@ -2,18 +2,23 @@
 
 -->
 <div>
-	<?php 
-		$num = 0;
-		$nav_num=0; 
-	?>
-	<?php foreach($local as $site): ?>
+	<?php if(!$local):?>
+		<?php echo "Sorry, no data for this part for now.."; ?>
+	<?php else: ?>
+		<?php 
+			$num = 0;
+			$nav_num=0; 
+		?>
+		<?php foreach($local as $site): ?>
 		
 			<?php if($num <49): ?>
 				<a href="<?=$site['domain_address']?>" target="_blank"><div class = 'box'><?=$site['name'] ?></div></a>
 		 	<?php endif; ?>
 		 	<?php	$num++; ?>
 
-	<?php endforeach; ?>
+		<?php endforeach; ?>
+	<?php endif;?>
+
 
 </div>
 

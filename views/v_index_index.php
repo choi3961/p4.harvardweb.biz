@@ -216,14 +216,16 @@
 					<li class = 'category02' id = '10'><a href="/producers/category02/배">배</a></li>
 					<li class = 'category02'><a href="/producers/category02/포도">포도</a></li>
 					<li class = 'category02'><a href="/producers/category02/복숭아">복숭아</a></li>
+					<li class = 'category02'><a href="/producers/category02/참외">참외</a></li>
+					<li class = 'category02'><a href="/producers/category02/딸기">딸기</a></li>
+					<li class = 'category02'><a href="/producers/category02/대추">대추</a></li>
+					<li class = 'category02'><a href="/producers/category02/블루베리">블루베리</a></li>
 				</ul>
 			</li>
-			<li class = 'category01'><a href = '#' class = 'category001'>채소류</a>
+			<li class = 'category01'><a href = '#' class = 'category001'>국산차</a>
 				<ul>
-					<li class = 'category02' id = '20'><a href="/producers/category02/배추">배추</a></li>
-					<li class = 'category02'><a href="/producers/category02/상추">상추</a></li>
-					<li class = 'category02'><a href="/producers/category02/무">무</a></li>
-					<li class = 'category02'><a href="/producers/category02/당근">당근</a></li>
+					<li class = 'category02'><a href="/producers/category02/차">차</a></li>
+					<li class = 'category02'><a href="/producers/category02/국화차">국화차</a></li>
 				</ul>
 			</li>
 			<li class = 'category01'><a href = '#' class = 'category001'>곡류</a>
@@ -231,15 +233,13 @@
 					<li class = 'category02' id = '30'><a href="/producers/category02/쌀">쌀</a></li>
 					<li class = 'category02'><a href="/producers/category02/보리">보리</a></li>
 					<li class = 'category02'><a href="/producers/category02/콩">콩</a></li>
-					<li class = 'category02'><a href="/producers/category02/율무">율무</a></li>
+					<li class = 'category02'><a href="/producers/category02/고추">고추</a></li>
 				</ul>
 			</li>
 			<li class = 'category01'><a href = '#' class = 'category001'>육류</a>
 				<ul>
 					<li class = 'category02'><a href="/producers/category02/소고기">소고기</a></li>
-					<li class = 'category02'><a href="/producers/category02/돼지고기">돼지고기</a></li>
 					<li class = 'category02'><a href="/producers/category02/닭고기">닭고기</a></li>
-					<li class = 'category02'><a href="/producers/category02/오리고기">오리고기</a></li>
 				</ul>
 			</li>
 			<li class = 'category01'><a href = '#' class = 'category001'>버섯류</a>
@@ -247,7 +247,6 @@
 					<li class = 'category02'><a href="/producers/category02/송이버섯">송이버섯</a></li>
 					<li class = 'category02'><a href="/producers/category02/표고버섯">표고버섯</a></li>
 					<li class = 'category02'><a href="/producers/category02/느타리버섯">느타리버섯</a></li>
-					<li class = 'category02'><a href="/producers/category02/상황버섯">상황버섯</a></li>
 				</ul>
 			</li>
 			<li class = 'category01'><a href = '#' class = 'category001'>한과류</a>
@@ -256,6 +255,13 @@
 					<li class = 'category02'><a href="/producers/category02/엿강정류">엿강정류</a></li>
 					<li class = 'category02'><a href="/producers/category02/유밀과류">유밀과류</a></li>
 					<li class = 'category02'><a href="/producers/category02/숙실과류">숙실과류</a></li>
+				</ul>
+			</li>
+			<li class = 'category01'><a href = '#' class = 'category001'>기타</a>
+				<ul class = 'cat02'>
+					<li class = 'category02'><a href="/producers/category02/체험마을">체험마을</a></li>
+					<li class = 'category02'><a href="/producers/category02/기타">기타</a></li>
+					
 				</ul>
 			</li>
 		</ul>

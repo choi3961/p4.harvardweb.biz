@@ -18,7 +18,7 @@
 	border-style: inset;
 	border-width: 3px;
 	margin: auto;
-	background-color: #B7BAB6;
+	background-color: #BFDEC1;
 	position: relative;
 }
 
@@ -36,7 +36,7 @@
 	margin: auto;
 	width: 600px;
 	text-align: center;
-	background-color: #ccffcc;
+	background-color: #3DD447;
 	font-size: 40px;
 	
 }
@@ -47,10 +47,10 @@
 .header02{
 	font-size: 21px;
 	margin: 5px auto;
-	width: 810px;
+	width: 813px;
 	height: 70px;
 	left: 150px;
-	//background-color: green;
+	background-color: #1AAEE8;
 	//float: right;
 	display: block;
 }
@@ -59,8 +59,8 @@
 
 */
 .header02 ul{
-	display: inline;
-	//margin: 0px auto;
+	//display: inline;
+	margin: 0px 0px 0px 15px;
 	padding: 0px;
 }
 
@@ -68,9 +68,9 @@
 
 */
 .header02 ul li{
-	width: 90px;
+	width: 97px;
 	float: left;
-	background-color: #11aaff;
+	//background-color: #11aaff;
 	//margin: 5px auto;
 	padding: 0;
 	list-style: none;
@@ -107,6 +107,8 @@ a:link{
 	//display: block;
 	top: 95px;
 	left: 44px;
+	background-color: #95D6F0;
+	width:790px;
 
 }
 
@@ -117,7 +119,8 @@ a:link{
 .header02 ul li ul li{
 	display: none;
 	//display:block;
-	background-color: #ffaaff;
+	//background-color: #95D6F0;
+	//width: 70px;
 }
 
 
@@ -130,7 +133,7 @@ a:link{
 	height: 917px;
 	left: 0px;
 	top: 170px;
-	background-color: #EB4F0C;
+	background-color: #EB9FED;
 	position: absolute;
 	text-indent: 5px;
 	padding-top: 10px;
@@ -207,7 +210,7 @@ a:link{
 	position: absolute;
 	right: 0px;
 	top: 170px;
-	background-color: #6BD663;
+	background-color: #CBE810;
 	//z-index: -5;
 }
 
@@ -223,7 +226,7 @@ a:link{
 	margin: 6px;
 	padding: 5px 2px 2px 2px;
 	text-align: center;
-	background-color: #aa99ff;
+	background-color: #FA970C;
 }
 
 

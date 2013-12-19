@@ -7,6 +7,84 @@ class administrator_controller extends base_controller{
 		parent::__construct();
 	}
 
+	public function update_category(){
+		/////////////////////////
+		/*
+		$sql = "update sites
+				set category02 = '국화차'
+				where domain_address = 'http://ecotea.kr/'";
+
+				DB::instance(DB_NAME)->query($sql);
+				echo "completed";
+		*/
+		////////////////////////
+//////////////////////////////////////////
+		
+		$q="SELECT
+		name,
+        domain_address
+        FROM sites;";
+
+	    # Run the query
+	    $posts = DB::instance(DB_NAME)->select_rows($q);
+
+		$num = 0;
+	    foreach($posts as $key){
+	    	
+	    	echo $num;
+
+	    	//This is for the php running time. It seems to stop after some time.
+	    	$num++;
+	    	if($num<0){
+	    		continue;
+	    	}
+
+	    	$name = $key['name'];
+	    	$site = $key['domain_address'];
+
+		   	//$data = file_get_contents($site);
+////////////////////////////////
+/*
+			if(preg_match("/melon/", $site)){
+				echo "matched";
+				echo $site;
+				echo "<br>";
+				
+				$sql = "update sites
+						set category02 = '참외'
+						where domain_address = '$site'";
+
+				DB::instance(DB_NAME)->query($sql);
+
+			}
+			else{
+				echo "no<br>";
+			}
+*/
+////////////////////////////
+			
+			if(preg_match("/딸기/", $name)){
+				echo "matched";
+				echo $site;
+				echo "<br>";
+				
+				$sql = "update sites
+						set category02 = '딸기'
+						where domain_address = '$site'";
+
+				DB::instance(DB_NAME)->query($sql);
+
+			}
+			else{
+				echo "no<br>";
+			}
+
+/////////////////////////////////////////				
+	    }
+	
+
+	}
+
 	public function checkdns(){
 ///////////////////////////////////////////////
 	    $q="SELECT 
@@ -16,7 +94,7 @@ class administrator_controller extends base_controller{
 	    # Run the query
 	    $posts = DB::instance(DB_NAME)->select_rows($q);
 
-$num = 0;
+		$num = 0;
 	    foreach($posts as $key){
 	    	
 	    	echo $num;
@@ -36,30 +114,7 @@ $num = 0;
 		    	    where domain_address = '$site'";
 		    	DB::instance(DB_NAME)->query($qq);
 		    }
-	    }		
-
-///////////////////////////////////////////////
-/*
-	    foreach($posts as $key){
-	    	$num++;
-	    	echo $key['domain_address'];
-	    	echo "<br>";
-	    	
-	    	$site = $key['domain_address'];
-			$temp = checkdnsrr($site);
-
-			if($temp){
-				echo "exists";
-				echo "<br>";
-			}
-			else{
-				echo "no";
-				echo "<br>";
-			}
 	    }
-	    echo $num;
-*/
-///////////////////////////////////////////////////////
 
 
 	}

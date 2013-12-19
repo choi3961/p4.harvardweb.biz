@@ -48,6 +48,7 @@ class users_controller extends base_controller {
         $user_id = DB::instance(DB_NAME)->insert('users', $_POST);
 
         //sending mail when a user signed up
+        /*
         $to[]    = Array("name" => APP_NAME, "email" => $email);
         $from    = Array("name" => APP_NAME, "email" => APP_EMAIL);
         $subject = "Message from SQUAWK";              
@@ -57,6 +58,7 @@ class users_controller extends base_controller {
     
         # Send email
         Email::send($to, $from, $subject, $body, true, $cc, $bcc);
+        */
 
         Router::redirect('/users/login/registered');
     }

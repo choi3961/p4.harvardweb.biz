@@ -2,18 +2,26 @@
 
 -->
 <div>
-	<?php 
-		$num = 0;
-		$nav_num=0; 
-	?>
-	<?php foreach($category02 as $site): ?>
-		
-			<?php if($num <40): ?>
-				<a href="<?=$site['domain_address']?>" target="_blank"><div class = 'box'><?=$site['name'] ?></div></a>
-		 	<?php endif; ?>
-		 	<?php	$num++; ?>
+	<?php if(!$category02): ?>
+		<?php echo "Sorry, no data for now"; ?>
+	<?php else: ?>
+		<?php 
+			$num = 0;
+			$nav_num=0; 
+		?>
+		<?php foreach($category02 as $site): ?>
+			
+				<?php if($num <40): ?>
+					<a href="<?=$site['domain_address']?>" target="_blank"><div class = 'box'><?=$site['name'] ?></div></a>
+			 	<?php endif; ?>
+			 	<?php	$num++; ?>
 
-	<?php endforeach; ?>
+		<?php endforeach; ?>	
+
+	<?php endif; ?>
+
+
+
 
 </div>
 

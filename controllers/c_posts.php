@@ -47,20 +47,27 @@ class posts_controller extends base_controller {
 
     # Process the add request of posting into the database.
     public function p_add() {
+        $temp = $_POST['content'];
+        if(!$temp){
+            echo "Sorry, no data registered";
+        }
+        else{
+            # Associate this post with this user
+            $_POST['user_id']  = $this->user->user_id;
 
-        # Associate this post with this user
-        $_POST['user_id']  = $this->user->user_id;
+            # Unix timestamp of when this post was created / modified
+            $_POST['created']  = Time::now();
+            $_POST['modified'] = Time::now();
 
-        # Unix timestamp of when this post was created / modified
-        $_POST['created']  = Time::now();
-        $_POST['modified'] = Time::now();
+            # Insert
+            # Note we didn't have to sanitize any of the $_POST data because we're using the insert method which does it for us
+            DB::instance(DB_NAME)->insert('posts', $_POST);
 
-        # Insert
-        # Note we didn't have to sanitize any of the $_POST data because we're using the insert method which does it for us
-        DB::instance(DB_NAME)->insert('posts', $_POST);
+            # Redirect to the user's posts
+            Router::redirect('/posts/mypage');            
+        }
 
-        # Redirect to the user's posts
-        Router::redirect('/posts/mypage');
+
     }
 
     # renders a page to update a post on
@@ -120,16 +127,15 @@ class posts_controller extends base_controller {
             users.first_name,
             users_users.user_id,
             users.last_name
-            from posts
-            INNER JOIN users
-                ON posts.user_id = users.user_id
+            FROM posts
             INNER JOIN users_users
                 ON posts.user_id = users_users.user_id_followed
+            INNER JOIN users
+                ON posts.user_id = users.user_id
             WHERE users_users.user_id = ".$this->user->user_id;
 
 /*
 */
-
         # Run the query
         $posts = DB::instance(DB_NAME)->select_rows($q);
  
