@@ -233,6 +233,33 @@ class producers_controller extends base_controller{
         Router::redirect('/users/login/registered');
         */
         echo "your site is registered";
+    }
+    # Shows farmers posts.
+    public function farmers_posts() {
+        # Set up the View
+        $this->template->content = View::instance('v_producers_farmers_posts');
+
+        $this->template->title   = "Farmers' Posts";
+
+        # Build the query to show the posts which the user follows the posters of
+        $q="SELECT 
+            posts.content,
+            posts.created,
+            posts.user_id,
+            users.first_name,
+            users.last_name
+            FROM posts
+            INNER JOIN users
+                ON posts.user_id = users.user_id";
+
+        # Run the query
+        $posts = DB::instance(DB_NAME)->select_rows($q);
+ 
+        # Pass data to the View
+        $this->template->content->posts = $posts;
+
+        # Render the View
+        echo $this->template;        
     }    
 }
 

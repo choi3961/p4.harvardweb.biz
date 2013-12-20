@@ -1,9 +1,12 @@
 <!--
 
 -->
-<div class = 'container02'>
-    <div class = 'header002'>site-register</div>
-    <div class = 'center02'>
+<div class = 'container'>
+    <div class = 'header'>
+    <div class = 'header03'>Site-register</div>
+    </div>
+    <div class = 'container02'>
+        <div class = 'center02'>
         <!-- sign up interface page -->
         <form method='POST' action='/producers/p_sites_register' class='form-standard'>
             Name <span class = 'required'>*</span><br>
@@ -39,5 +42,6 @@
             
             <input type='submit' value = 'submit'>
         </form>
+        </div>
     </div>
 </div>

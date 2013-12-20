@@ -13,7 +13,7 @@
 }
 
 /*
-
+This is for the top part of the page.
 */
 #menu02{
 	background-color:#cccccc;
@@ -24,7 +24,7 @@
 }
 
 /*
-
+This is for the trade mark of the page.
 */
 .trade-mark{
 	background-color: #aaaa33;
@@ -39,7 +39,7 @@
 }
 
 /*
-
+This is for the head part of the page.
 */
 .header002{
 	background-color: #aaaa33;
@@ -50,21 +50,21 @@
 }
 
 /*
-
+This is for greeting to the user who is logged in.
 */
 .greetings{
 	float: right;
 }
 
 /*
-
+This is for the body part of the page.
 */
 .body02{
 	background-color: #77ffa0;
 }
 
 /*
-
+This is for the body part of the page.
 */
 .center02{
 	margin: 0px auto; 
@@ -77,7 +77,7 @@
 }
 
 /*
-
+This is for the body part of the page.
 */
 .cen-cen{
 	width:300px;
@@ -85,15 +85,12 @@
 }
 
 /*
-
+This is for the form style of the page.
 */
 .form-standard{
 	margin-left:9px;
 }
 
-/*
-
-*/
 .form-standard input{
 	border-radius: 9px;
 	height:21px;
@@ -101,31 +98,22 @@
 	border-color: #999999;
 }
 
-/*
-
-*/
 .form-standard input[type = 'submit']{
 	width:90px;
 	height: 30px;
 }
 
-/*
-
-*/
 .form-standard input[type]:hover{
 	background-color: #cccccc;
 }
 
-/*
-
-*/
 .form-standard textarea{
 	width: 475px;
 	height: 120px;
 }
 
 /*
-
+This styles the table on the page.
 */
 table {
   max-width: 100%;
@@ -135,16 +123,13 @@ table {
 }
 
 /*
-
+This styles the table on the page.
 */
 .table {
   width: 100%;
   margin-bottom: 20px;
 }
 
-/*
-
-*/
 .table th, 
 .table td {
   padding: 8px;
@@ -154,23 +139,14 @@ table {
   border-top: 2px solid #dddddd;
 }
 
-/*
-
-*/
 .table th {
   font-weight: bold;
 }
 
-/*
-
-*/
 .table thead th {
   vertical-align: bottom;
 }
 
-/*
-
-*/
 .table caption + thead tr:first-child th,
 .table caption + thead tr:first-child td,
 .table colgroup + thead tr:first-child th,
@@ -180,38 +156,26 @@ table {
   border-top: 0;
 }
 
-/*
-
-*/
 .table tbody + tbody {
   border-top: 2px solid #dddddd;
 }
 
-/*
-
-*/
 .table .table {
   background-color: #ffffff;
 }
 
-/*
-
-*/
 .table-striped tbody > tr:nth-child(odd) > td,
 .table-striped tbody > tr:nth-child(odd) > th {
   background-color: #f9f9f9;
 }
 
-/*
-
-*/
 .table-hover tbody tr:hover > td,
 .table-hover tbody tr:hover > th {
   background-color: #f5f5f5;
 }
 
 /*
-
+This is for the posts on the page.
 */
 .article{
 	margin: 9px 9px 9px 19px;
@@ -228,7 +192,7 @@ table {
 }
 
 /*
-
+This is for the posts on the page.
 */
 .article-control input[type='submit']:hover{
 	background-color: gray;
@@ -254,10 +218,16 @@ table {
 	display:inline-block;
 }
 
+/*
+This is for the input of the form required.
+*/
 .required{
 	color: red;
 }
 
+/*
+This is for the bottom part of the page.
+*/
 .footer02{
 	background-color: #aaaa33;
 	width: 700px;
@@ -267,6 +237,9 @@ table {
 	height:50px;
 }
 
+/*
+This is for the bottom part of the page.
+*/
 .footer-lefter{
 	text-indent: 10px;
 	float:left;
@@ -281,6 +254,9 @@ a:hover{
 	font-weight: bold;
 }
 
+/*
+This is for the input style of the form on the page.
+*/
 .input_style{
 	border-radius: 9px;
 	height:23px;
@@ -288,6 +264,9 @@ a:hover{
 	border-color: #999999;
 }
 
+/*
+This is for the error message.
+*/
 .error{
 	color: #ff0000;
 }

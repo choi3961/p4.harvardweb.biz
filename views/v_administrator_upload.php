@@ -1,5 +1,5 @@
 <!--
-
+This is for the update the database
 -->
 <div>
 	<form  enctype = "multipart/form-data" method = 'post' action = 'p_upload'>

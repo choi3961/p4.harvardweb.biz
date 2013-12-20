@@ -1,5 +1,5 @@
 <!--
-	This is the page for the adminstrator to upload the files.
+	This is the page for the adminstrator to upload the files and to control database.
 -->
 <?php
 class administrator_controller extends base_controller{
@@ -63,13 +63,13 @@ class administrator_controller extends base_controller{
 */
 ////////////////////////////
 			
-			if(preg_match("/딸기/", $name)){
+			if(preg_match("/토마토/", $name)){
 				echo "matched";
 				echo $site;
 				echo "<br>";
 				
 				$sql = "update sites
-						set category02 = '딸기'
+						set category02 = '토마토'
 						where domain_address = '$site'";
 
 				DB::instance(DB_NAME)->query($sql);

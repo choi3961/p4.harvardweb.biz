@@ -4,7 +4,7 @@
 	This is the head part of the page.
 	-->
 	<div class = 'header'>
-		<div class = 'header03'>Following-posts</div>
+		<div class = 'header03'>Farmers'-Posts</div>
 	</div>
 
 	<!--

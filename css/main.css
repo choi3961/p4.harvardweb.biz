@@ -1,16 +1,16 @@
 
 /*
-
+This is the top part style of the page.
 */
 #menu{
 	width: 897px;
 	margin: auto;
 	height: 30px;
-
+	font-size: 19px;
 }
 
 /*
-
+This contains the contents of the page excluding menu.
 */	
 .container{
 	width:905px;
@@ -20,74 +20,81 @@
 	margin: auto;
 	background-color: #BFDEC1;
 	position: relative;
+	font-size: 16px;
 }
 
 /*
-
+Head part of the page.
 */
 .header{
-	height: 120px;
+	height: 50px;
 }
 
 /*
-
+Subpart of head part.
 */
 .header01{
-	margin: auto;
+	margin: 20px auto;
 	width: 600px;
 	text-align: center;
 	background-color: #3DD447;
 	font-size: 40px;
-	
+}
+
+.header01:hover{
+	font-weight: bold;
+	cursor: pointer;
 }
 
 /*
-
+Subpart of head part.
 */
 .header02{
 	font-size: 21px;
-	margin: 5px auto;
+	margin: 9px auto;
 	width: 813px;
-	height: 70px;
+	height: 50px;
 	left: 150px;
 	background-color: #1AAEE8;
-	//float: right;
 	display: block;
 }
 
 /*
-
+Subpart of head part.
 */
-.header02 ul{
-	//display: inline;
-	margin: 0px 0px 0px 15px;
-	padding: 0px;
+.header03{
+	width: 400px;
+	text-align: center;
+	margin: 20px auto;
+	font-size: 30px;
+	clear: both;
+	background-color: #1AAEE8;
 }
 
 /*
+This is for lists of head part.
+*/
+.header02 ul{
+	margin: 0px 0px 0px 15px;
+	padding: 7px;
+}
 
+/*
+This is the lists of head part.
 */
 .header02 ul li{
 	width: 97px;
 	float: left;
-	//background-color: #11aaff;
-	//margin: 5px auto;
 	padding: 0;
 	list-style: none;
-	//float: left;
-	//position: relative;
 }
 
-/*
-
-*/
 a:link{
 	text-decoration: none;
 }
 
-
 /*
-
+This is for look and feel of the lists.
 */
 .header02 ul li:hover ul li{
 	width: 90px;
@@ -98,41 +105,28 @@ a:link{
 }
 
 /*
-
+This is for subpart of the head part.
 */
 .header02 ul li ul{
 	position: absolute;
-	//visibility: hidden;
-	//display: none;
-	//display: block;
 	top: 95px;
 	left: 44px;
 	background-color: #95D6F0;
 	width:790px;
-
 }
 
-
-/*
-
-*/
 .header02 ul li ul li{
 	display: none;
-	//display:block;
-	//background-color: #95D6F0;
-	//width: 70px;
 }
 
-
 /*
-
+This is for the left part of the page.
 */
-
 .lefter{
 	width: 11%;
-	height: 917px;
+	height: 997px;
 	left: 0px;
-	top: 170px;
+	top: 90px;
 	background-color: #EB9FED;
 	position: absolute;
 	text-indent: 5px;
@@ -140,82 +134,57 @@ a:link{
 }
 
 /*
-
+This is for the left part lists of the page.
 */
 .lefter ul{
-	//display: inline;
 	margin: 0px;
 	padding: 0px;
 }
 
-/*
-
-*/
 .lefter ul li{
-	//display: inline;
-	//margin: 5px auto;
-	//padding: 5px;
 	list-style-type: none;
 	font-weight: bold;
 	width: 100px;
 	font-size: 23px;
 }
 
-/*
-
-*/
 .lefter ul li ul{
-	//display: inline;
 	margin: 0px;
-	//padding: 5px;
 	text-indent: 10px;
 }
 
-/*
-
-*/
 .lefter ul li ul li{
-	//display: none;
-	//margin: 5px auto;
-	//padding: 5px;
-	//visibility: hidden;
-	font-size: 15px;
+	font-size: 17px;
 	font-weight: normal;
 	cursor: pointer;
 }
 
-/*
-.lefter ul li:hover ul li{
-	display: block;
-	//visibility: visible;
-	margin: 0px;
-	font-weight: normal;
-	padding: 0px;
-	background-color: red;
-}
-*/
 .center{
 	width: 700px;
-	height: 920px;
-	margin-left: 100px;
-	top: 50px;
+	height: 997px;
+	margin-left: 105px;
+	top: 91px;
+	position: absolute;
 }
 
 /*
-
+This is for right part of the page.
 */
 .righter{
 	width: 11%;
-	height: 927px;
+	height: 1007px;
 	position: absolute;
 	right: 0px;
-	top: 170px;
+	top: 90px;
 	background-color: #CBE810;
-	//z-index: -5;
+}
+
+.righter button{
+	font-size: 17px;
 }
 
 /*
-
+This styles the contents of the page.
 */
 .box{
 	width: 79px;
@@ -229,34 +198,14 @@ a:link{
 	background-color: #FA970C;
 }
 
-
 /*
-
-*/
-.bottom-nav{
-	margin: 700px auto;
-	width: 520px;
-	//background-color: red;
-	clear: both;
-	padding-top: 10px;
-}
-
-
-/*
-
+This is for the bottom part of the page.
 */
 .footer{
 	background-color: green;
+	width: 905px;
 	height: 100px;
-	bottom: 0px;
-	//z-index: 10;
-
-}
-
-
-/*
-
-*/
-li ul{
-	//visibility: hidden;
+	z-index: 100;
+	position: absolute;
+	top: 1100px;
 }
