@@ -1,14 +1,14 @@
 <!-- This shows the posts the user follows -->
 <div class = 'container'>
 	<!--
-	This is the head part of the page.
+		This is the head part of the page.
 	-->
 	<div class = 'header'>
 		<div class = 'header03'>Following-posts</div>
 	</div>
 
 	<!--
-	This is the body part of the page.
+		This is the body part of the page.
 	-->
 	<div class = 'container02'>
 		<?php foreach($posts as $post): ?>

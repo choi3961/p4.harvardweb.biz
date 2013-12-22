@@ -1,5 +1,5 @@
 <!--
-This shows the contents of the landing page.
+	This shows the contents of the landing page.
 -->
 <div>
 	<?php 

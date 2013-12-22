@@ -1,14 +1,14 @@
 <!-- This provides the interface for the user to update the posts -->
 <div class = 'container'>
 	<!--
-	This is head part of the page.
+		This is head part of the page.
 	-->
 	<div class = 'header'>
 		<div class = 'header03'>Update</div>
 	</div>
 	
 	<!--
-	This is body part of the page.
+		This is body part of the page.
 	-->	
 	<div class = 'container02'>
 		<?php $post = $posts[0] ?>

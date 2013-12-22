@@ -1,7 +1,7 @@
 <?php
 /*
     This class is for filtering against the producers'(farmers') webpages.
-    It filters the pages according to the areas(bigger and smaller) and categories 
+    It filters the pages according to the areas(bigger and smaller) or categories 
     of agricultural products.
 */
 class producers_controller extends base_controller{
@@ -26,8 +26,6 @@ class producers_controller extends base_controller{
         $this->template->content->content02 = View::instance('v_producers_total_part');
         $this->template->content->content02->kk=$posts;
         $this->template->content->content02->loc_num = $part;  
-
-
         echo $this->template;      
     }
 
@@ -83,7 +81,6 @@ class producers_controller extends base_controller{
         (smaller local area than local() function)
     */
     public function local02($part){
-       //$temp = $_POST['local02'];
         $q="SELECT 
             domain_address,
             name
@@ -141,7 +138,6 @@ class producers_controller extends base_controller{
         # Run the query
         $posts = DB::instance(DB_NAME)->select_rows($q);
         $this->template->content->content02->category02=$posts;
-        //$this->template->content->loc_num = $loc;
         
         echo $this->template;
     } 
@@ -195,17 +191,18 @@ class producers_controller extends base_controller{
         }
 
         #error checking : compare POST data with database data
-        $email = $_POST['email'];
+        $domain_address = $_POST['domain_address'];
 
-        $q = "select email from sites
-             where email = '$email'";
-        $exist = DB::instance(DB_NAME)->select_field($q);     
+        $q = "select domain_address from sites
+             where domain_address = '$domain_address'";
+        $exist = DB::instance(DB_NAME)->select_field($q);
+
         //compare POST with database already registered
-        //if($exist==$email){
-        //    Router::redirect('/users/signup/failed');
-        //}
+        if($exist==$domain_address){
+            Router::redirect('/users/signup/failed');
+        }
         
-        # More data we want stored with the user
+        # More data we want stored with the sites
         //$_POST['created']  = Time::now();
         //$_POST['modified'] = Time::now();
 

@@ -1,6 +1,6 @@
 
 /*
-This is the top part style of the page.
+	This is the top part style of the page.
 */
 #menu{
 	width: 897px;
@@ -10,7 +10,7 @@ This is the top part style of the page.
 }
 
 /*
-This contains the contents of the page excluding menu.
+	This contains the contents of the page excluding menu.
 */	
 .container{
 	width:905px;
@@ -24,14 +24,14 @@ This contains the contents of the page excluding menu.
 }
 
 /*
-Head part of the page.
+	Head part of the page.
 */
 .header{
 	height: 50px;
 }
 
 /*
-Subpart of head part.
+	Subpart of head part.
 */
 .header01{
 	margin: 20px auto;
@@ -47,7 +47,7 @@ Subpart of head part.
 }
 
 /*
-Subpart of head part.
+	Subpart of head part.
 */
 .header02{
 	font-size: 21px;
@@ -60,7 +60,7 @@ Subpart of head part.
 }
 
 /*
-Subpart of head part.
+	Subpart of head part.
 */
 .header03{
 	width: 400px;
@@ -72,7 +72,7 @@ Subpart of head part.
 }
 
 /*
-This is for lists of head part.
+	This is for lists of head part.
 */
 .header02 ul{
 	margin: 0px 0px 0px 15px;
@@ -80,7 +80,7 @@ This is for lists of head part.
 }
 
 /*
-This is the lists of head part.
+	This is the lists of head part.
 */
 .header02 ul li{
 	width: 97px;
@@ -94,7 +94,7 @@ a:link{
 }
 
 /*
-This is for look and feel of the lists.
+	This is for look and feel of the lists.
 */
 .header02 ul li:hover ul li{
 	width: 90px;
@@ -105,7 +105,7 @@ This is for look and feel of the lists.
 }
 
 /*
-This is for subpart of the head part.
+	This is for subpart of the head part.
 */
 .header02 ul li ul{
 	position: absolute;
@@ -120,7 +120,7 @@ This is for subpart of the head part.
 }
 
 /*
-This is for the left part of the page.
+	This is for the left part of the page.
 */
 .lefter{
 	width: 11%;
@@ -134,7 +134,7 @@ This is for the left part of the page.
 }
 
 /*
-This is for the left part lists of the page.
+	This is for the left part lists of the page.
 */
 .lefter ul{
 	margin: 0px;
@@ -168,7 +168,7 @@ This is for the left part lists of the page.
 }
 
 /*
-This is for right part of the page.
+	This is for right part of the page.
 */
 .righter{
 	width: 11%;
@@ -184,7 +184,7 @@ This is for right part of the page.
 }
 
 /*
-This styles the contents of the page.
+	This styles the contents of the page.
 */
 .box{
 	width: 79px;
@@ -199,7 +199,7 @@ This styles the contents of the page.
 }
 
 /*
-This is for the bottom part of the page.
+	This is for the bottom part of the page.
 */
 .footer{
 	background-color: green;

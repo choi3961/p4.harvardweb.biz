@@ -1,13 +1,13 @@
 ﻿<!--
-This is for the landing page of the webpage.
+	This is for the landing page of the webpage.
 -->
 
 <!--
-This contains the contents of the page.
+	This contains the contents of the page.
 -->
 <div class = 'container'>
 	<!--
-	This is the head part of of the page.
+		This is the head part of of the page.
 	-->
 	<div class = 'header'>
 		<div class = 'header02'>
@@ -26,14 +26,14 @@ This contains the contents of the page.
 	<hr>
 
 	<!--
-	This is the left part of the landing page.
+		This is the left part of the landing page.
 	-->
 	<div class = 'lefter'>
 		<ul>
-			<li class = 'category01'><a href = '#' class = 'category001'>과일류</a>
+			<li class = 'category01'>과일류
 				<ul class = 'cat02'>
-					<li class = 'category02'><a href="/producers/category02/사과">사과</a></li>
-					<li class = 'category02' id = '10'><a href="/producers/category02/배">배</a></li>
+					<li ><a href="/producers/category02/사과">사과</a></li>
+					<li ><a href="/producers/category02/배">배</a></li>
 					<li class = 'category02'><a href="/producers/category02/토마토">토마토</a></li>
 					<li class = 'category02'><a href="/producers/category02/포도">포도</a></li>
 					<li class = 'category02'><a href="/producers/category02/복숭아">복숭아</a></li>
@@ -43,13 +43,13 @@ This contains the contents of the page.
 					<li class = 'category02'><a href="/producers/category02/블루베리">블루베리</a></li>
 				</ul>
 			</li>
-			<li class = 'category01'><a href = '#' class = 'category001'>국산차</a>
+			<li class = 'category01'>국산차
 				<ul>
 					<li class = 'category02'><a href="/producers/category02/차">차</a></li>
 					<li class = 'category02'><a href="/producers/category02/국화차">국화차</a></li>
 				</ul>
 			</li>
-			<li class = 'category01'><a href = '#' class = 'category001'>곡류</a>
+			<li class = 'category01'>곡류
 				<ul>
 					<li class = 'category02' id = '30'><a href="/producers/category02/쌀">쌀</a></li>
 					<li class = 'category02'><a href="/producers/category02/보리">보리</a></li>
@@ -57,27 +57,27 @@ This contains the contents of the page.
 					<li class = 'category02'><a href="/producers/category02/고추">고추</a></li>
 				</ul>
 			</li>
-			<li class = 'category01'><a href = '#' class = 'category001'>육류</a>
+			<li class = 'category01'>육류
 				<ul>
 					<li class = 'category02'><a href="/producers/category02/소고기">소고기</a></li>
 					<li class = 'category02'><a href="/producers/category02/닭고기">닭고기</a></li>
 				</ul>
 			</li>
-			<li class = 'category01'><a href = '#' class = 'category001'>버섯류</a>
+			<li class = 'category01'>버섯류
 				<ul>
 					<li class = 'category02'><a href="/producers/category02/송이버섯">송이버섯</a></li>
 					<li class = 'category02'><a href="/producers/category02/표고버섯">표고버섯</a></li>
 					<li class = 'category02'><a href="/producers/category02/느타리버섯">느타리버섯</a></li>
 				</ul>
 			</li>
-			<li class = 'category01'><a href = '#' class = 'category001'>식품류</a>
+			<li class = 'category01'>식품류
 				<ul>
 					<li class = 'category02'><a href="/producers/category02/한과">한과</a></li>
 					<li class = 'category02'><a href="/producers/category02/김치">김치</a></li>
 					<li class = 'category02'><a href="/producers/category02/인삼제품">인삼제품</a></li>
 				</ul>
 			</li>
-			<li class = 'category01'><a href = '#' class = 'category001'>기타</a>
+			<li class = 'category01'>기타
 				<ul class = 'cat02'>
 					<li class = 'category02'><a href="/producers/category02/체험마을">체험마을</a></li>					
 				</ul>
@@ -86,26 +86,22 @@ This contains the contents of the page.
 	</div>
 
 	<!--
-	This is the body part 
+		This is the body part 
 	-->
 	<div class = 'center'>
 		<?php if(isset($content02)) echo $content02; ?>
 	</div>
 
 	<!--
-	This is right part of the landing page.
+		This is right part of the landing page.
 	-->
 	<div class = 'righter'>
-		<a href="/producers/farmers_posts"><button>farmers' posts</button></a>
+		<a href="/producers/farmers_posts"><button>Farmers' posts</button></a>
 	</div>
 	
 	<!--
-	This is bottom part of the landing page.
+		This is bottom part of the landing page.
 	-->	
 	<div class = 'footer'>
 	</div>
 </div>
-
-
-
-

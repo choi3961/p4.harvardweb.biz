@@ -13,7 +13,7 @@
 }
 
 /*
-This is for the top part of the page.
+	This is for the top part of the page.
 */
 #menu02{
 	background-color:#cccccc;
@@ -24,7 +24,7 @@ This is for the top part of the page.
 }
 
 /*
-This is for the trade mark of the page.
+	This is for the trade mark of the page.
 */
 .trade-mark{
 	background-color: #aaaa33;
@@ -39,7 +39,7 @@ This is for the trade mark of the page.
 }
 
 /*
-This is for the head part of the page.
+	This is for the head part of the page.
 */
 .header002{
 	background-color: #aaaa33;
@@ -50,21 +50,21 @@ This is for the head part of the page.
 }
 
 /*
-This is for greeting to the user who is logged in.
+	This is for greeting to the user who is logged in.
 */
 .greetings{
 	float: right;
 }
 
 /*
-This is for the body part of the page.
+	This is for the body part of the page.
 */
 .body02{
 	background-color: #77ffa0;
 }
 
 /*
-This is for the body part of the page.
+	This is for the body part of the page.
 */
 .center02{
 	margin: 0px auto; 
@@ -77,7 +77,7 @@ This is for the body part of the page.
 }
 
 /*
-This is for the body part of the page.
+	This is for the body part of the page.
 */
 .cen-cen{
 	width:300px;
@@ -85,7 +85,7 @@ This is for the body part of the page.
 }
 
 /*
-This is for the form style of the page.
+	This is for the form style of the page.
 */
 .form-standard{
 	margin-left:9px;
@@ -113,7 +113,7 @@ This is for the form style of the page.
 }
 
 /*
-This styles the table on the page.
+	This styles the table on the page.
 */
 table {
   max-width: 100%;
@@ -123,7 +123,7 @@ table {
 }
 
 /*
-This styles the table on the page.
+	This styles the table on the page.
 */
 .table {
   width: 100%;
@@ -175,7 +175,7 @@ This styles the table on the page.
 }
 
 /*
-This is for the posts on the page.
+	This is for the posts on the page.
 */
 .article{
 	margin: 9px 9px 9px 19px;
@@ -192,7 +192,7 @@ This is for the posts on the page.
 }
 
 /*
-This is for the posts on the page.
+	This is for the posts on the page.
 */
 .article-control input[type='submit']:hover{
 	background-color: gray;
@@ -219,14 +219,14 @@ This is for the posts on the page.
 }
 
 /*
-This is for the input of the form required.
+	This is for the input of the form required.
 */
 .required{
 	color: red;
 }
 
 /*
-This is for the bottom part of the page.
+	This is for the bottom part of the page.
 */
 .footer02{
 	background-color: #aaaa33;
@@ -238,7 +238,7 @@ This is for the bottom part of the page.
 }
 
 /*
-This is for the bottom part of the page.
+	This is for the bottom part of the page.
 */
 .footer-lefter{
 	text-indent: 10px;
@@ -255,7 +255,7 @@ a:hover{
 }
 
 /*
-This is for the input style of the form on the page.
+	This is for the input style of the form on the page.
 */
 .input_style{
 	border-radius: 9px;
@@ -265,9 +265,8 @@ This is for the input style of the form on the page.
 }
 
 /*
-This is for the error message.
+	This is for the error message.
 */
 .error{
 	color: #ff0000;
 }
-
