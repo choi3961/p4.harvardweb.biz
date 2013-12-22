@@ -25,7 +25,8 @@ class producers_controller extends base_controller{
         $this->template->content = View::instance('v_index_index');
         $this->template->content->content02 = View::instance('v_producers_total_part');
         $this->template->content->content02->kk=$posts;
-        $this->template->content->content02->loc_num = $part;  
+        $this->template->content->content02->loc_num = $part; 
+        //$this->template->title   = "Update"; 
         echo $this->template;      
     }
 
@@ -45,10 +46,12 @@ class producers_controller extends base_controller{
         # Run the query
         $posts = DB::instance(DB_NAME)->select_rows($q);
 
+        $this->template->title = "Direct Deal";
         $this->template->content = View::instance('v_index_index');
         $this->template->content->content02 = View::instance('v_producers_local');
         $this->template->content->content02->local=$posts;
         $this->template->content->content02->part = $part;
+
         echo $this->template;
     }
 
@@ -125,6 +128,7 @@ class producers_controller extends base_controller{
         of the products.
     */
     public function category02($part){
+        $this->template->title   = "Direct Deal";
         $this->template->content = View::instance('v_index_index');
         $this->template->content->content02 = View::instance('v_producers_category02');//'v_producers_category02'
         //$temp = $_POST['category02'];

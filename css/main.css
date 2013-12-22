@@ -179,8 +179,13 @@ a:link{
 	background-color: #CBE810;
 }
 
-.righter button{
-	font-size: 17px;
+.right-menu{
+	font-size: 21px;
+	width: 92px;
+	height: 53px;
+	margin: 3px auto;
+	text-align: center;
+	background-color: #BFC1F5;
 }
 
 /*
