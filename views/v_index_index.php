@@ -96,7 +96,7 @@
 		This is right part of the landing page.
 	-->
 	<div class = 'righter'>
-		<a href="/producers/farmers_posts"><button>Farmers' posts</button></a>
+		<a href="/producers/farmers_posts"><button>Farmers&#39; posts</button></a>
 	</div>
 	
 	<!--
