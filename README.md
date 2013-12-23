@@ -87,8 +87,8 @@ Features
 
 Changelogs
 ----------
-* 2013-10-30 all the pages are completed.
-* 2013-11-1 index.php and main.css are validated.
-* 2013-11-2 Finally validated in local computer.
-* 2013-11-3 Commented for all the documents including css files.
+* 2013-11-30 all the pages are completed.
+* 2013-12-1 index.php and main.css are validated.
+* 2013-12-2 Finally validated in local computer.
+* 2013-12-3 Commented for all the documents including css files.
 
