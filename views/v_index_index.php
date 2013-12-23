@@ -108,8 +108,8 @@
 	  		between rural areas and urban cities in South Korea. 
 	  		The web sites in center part are Korean farmers' web pages 
 	  		which are naturally written in Korean.
-	  		This uses Korean language in the least, while meta controllers(buttons, links) 
-	  		reading in English.
+	  		This application uses Korean language in the least, 
+	  		while meta controllers(buttons, links) reading in English.
   		</div>
 	</div>
 </div>

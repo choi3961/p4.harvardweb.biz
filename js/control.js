@@ -40,7 +40,7 @@ $(function(){
     // Error checking on the input data in the form.
     $('input[name=password').keypress(function(){
         var temp = $(this).val();
-        if(temp.length<6){
+        if(temp.length<5){
             $('#password').html("Too short?! 6 characters at least.").css('color','red');
         }
         else{

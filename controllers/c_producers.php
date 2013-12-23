@@ -184,14 +184,12 @@ class producers_controller extends base_controller{
         echo $this->template;
     }
 
-    /*
 
-    */
     # renders interface of sign up
     public function p_sites_register($error = NULL) {
         #error checking : if not fullfilled, send the error message.
         if(!$_POST['name']||!$_POST['domain_address']||!$_POST['email'] || !$_POST['password'] ){
-            Router::redirect("/producers/signup/error");
+            Router::redirect("/users/signup/error");
         }
 
         #error checking : compare POST data with database data
@@ -219,20 +217,6 @@ class producers_controller extends base_controller{
         # Insert this user into the database
         $user_id = DB::instance(DB_NAME)->insert('sites', $_POST);
 
-        //sending mail when a user signed up
-        /*
-        $to[]    = Array("name" => APP_NAME, "email" => $email);
-        $from    = Array("name" => APP_NAME, "email" => APP_EMAIL);
-        $subject = "Message from SQUAWK";              
-        $body = View::instance('v_email_example');
-        $cc = "";
-        $bcc = "";
-    
-        # Send email
-        Email::send($to, $from, $subject, $body, true, $cc, $bcc);
-
-        Router::redirect('/users/login/registered');
-        */
         echo "your site is registered";
     }
     # Shows farmers posts.
