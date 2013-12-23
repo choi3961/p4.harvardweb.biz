@@ -87,8 +87,12 @@ Features
 
 Changelogs
 ----------
-* 2013-11-30 all the pages are completed.
-* 2013-12-1 index.php and main.css are validated.
-* 2013-12-2 Finally validated in local computer.
-* 2013-12-3 Commented for all the documents including css files.
+* 2013-12-9 Initial commit.
+* 2013-12-13 files added.
+* 2013-12-14 files modified.
+* 2013-12-17 files modified.
+* 2013-12-19 style completed.
+* 2013-12-20 documentation completed.
+* 2013-12-21 final touch.
+* 2013-12-22 validated through w3c.
 
